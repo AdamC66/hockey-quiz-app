@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%}
+    THE QUIZ
+{% endblock %}
+
+{% block content %}
+    {% for question in questions %}
+        <div class="card" style="margin: 1em">
+            <h2 class="display-6"> {{ question.question }} </h2>
+            <h5 class="lead"> {{ question.answer }} </h5>
+            <p class="small"> Category: {{question.category }} </h3>
+        </div>
+    {% endfor %}
+
+{% endblock %}

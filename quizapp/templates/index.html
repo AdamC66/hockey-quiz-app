@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%}
+    THE QUIZ
+{% endblock %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <h1 class="display-4"> Welcome to the Hockey Quiz! </h1>
+        <p class="my-4"> This basic site serves up random hockey questions. my intention is to add more questions over time</p>
+        <form action='/quiz'>
+        <button class='btn btn-primary'> Start! </button>
+        </form>
+    </div>
+
+{% endblock %}

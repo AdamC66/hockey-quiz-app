@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%}
+    THE QUIZ
+{% endblock %}
+
+{% block content %}
+        <div class="jumbotron">
+            <div class='card'>
+            <h2 class="question display-6" style="padding: 0.5em"> {{ question.question }} </h2>
+            </div>
+            <div class='card' style="margin-top: 0.5em;">
+            <h3 class="answer hidden lead" id='answer' style="padding: 0.5em"> {{ question.answer }} </h3>
+            </div>
+            <p> Category: {{question.category }} </h3>
+            <button class='answerbtn btn btn-primary' style="display: block;"> Show Answer </button>
+            <button class='refreshbtn btn btn-primary' style="display: block; margin-top: 0.5em;"> Next Question </button>
+        </div>
+{% endblock %}
+
+ {% block script %}
+
+    <script type="text/javascript" src="{% static 'js/quiz.js' %}" ></script>
+
+ {% endblock %}
